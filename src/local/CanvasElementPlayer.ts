@@ -10,8 +10,6 @@ export default class CanvasElementPlayer implements CanvasPlayer {
 
   private graphics: PIXI.Graphics;
 
-  private angle = 0;
-
   public constructor() {
     const app = new PIXI.Application({
       backgroundColor: 0xcccccc,
@@ -51,7 +49,6 @@ export default class CanvasElementPlayer implements CanvasPlayer {
   }
 
   public update(delta: number) {
-    this.angle += delta * 0.1;
     this.render();
   }
 
